@@ -1,0 +1,27 @@
+
+//* colors
+$primary: #f47567;
+$secondary: #c1121f;
+
+//* map for colors
+$colors: (
+  "background": #fbfcfe,
+  "primary": $primary,
+  "secondary": $secondary,
+  "text": #343a40,
+  "black": #000000,
+  "white": #ffffff,
+);
+
+//* spacing
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+$base-border-radius: 10px;
+$base-border-thickness: 1px;
+
+//* Font sizes
+$base-font-size: 1rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;

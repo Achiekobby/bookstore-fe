@@ -1,4 +1,4 @@
-
+import "./Scss/index.scss";
 function App() {
   return (
     <div className="App">
