@@ -18,7 +18,7 @@ $layout_values: flex-start, flex-end, center, space-between, space-around ;
 }
 
 @each $key, $value in $grid_gaps{
-  .gap-#{$key}{
+  .gap-#{$key}>*{
     padding:$value;
   }
 

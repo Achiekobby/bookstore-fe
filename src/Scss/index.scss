@@ -2,6 +2,7 @@
 @import "../Scss//variables";
 
 //* Layouts
+@import "./base";
 @import "../Scss/layout";
 @import "../Scss/breakpoints";
 
@@ -10,6 +11,9 @@
 
 //* colors
 @import "../Scss/colors";
+
+//* components
+@import "../Scss//component/navbar";
 
 //* utilities
 @import "../Scss/utilities";
