@@ -12,7 +12,7 @@ $grid_gaps:(
 $layout_values: flex-start, flex-end, center, space-between, space-around ;
 
 @each $value in $layout_values{
-  .justify.#{$value}{
+  .justify-#{$value}{
     justify-content: $value;
   }
 }
