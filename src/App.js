@@ -4,12 +4,16 @@ import {Routes, Route} from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Mobilenav from "./components/Mobilenav";
+import React, {useState} from "react"
 
 function App() {
+  const [sidebar, setSidebar] = useState(false)
+
+
   return (
     <div className="App">
-      <Mobilenav/>
-      <Navbar/>
+      <Navbar showSidebar={()=>setSidebar(!sidebar)} />
+      <Mobilenav showSidebar={sidebar} mobileMenuClose={()=>setSidebar(false)}/>
       <Routes>
         <Route path="/" element={<Home/>} />
       </Routes>
