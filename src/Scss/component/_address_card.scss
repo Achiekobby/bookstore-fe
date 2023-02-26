@@ -1,0 +1,25 @@
+.mobile-address{
+  position: relative;
+
+  .container{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    max-width: 380px;
+    width: 100%;
+    .row{
+      width: 100%;
+
+      .address-card{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow:$base-box-shadow;
+        // border: $base-border-thickness solid $primary;
+        z-index: 100;
+      }
+    }
+  }
+}
