@@ -8,18 +8,18 @@ import cartImg from "../assets/icons/cart.png";
 import locationImg from "../assets/icons/location-colored.png";
 import { motion } from "framer-motion";
 
-const Navbar = ({showSidebar}) => {
+const Navbar = ({showSidebar, showAddressCard}) => {
   return (
     <nav className="navbar">
       <div className="container">
         <div className="row justify-space-between">
           <div className="mobile-m" onClick={showSidebar}>
-            <img src={mobileMenu} alt="mobile menu icon" />
+            <img src={mobileMenu} alt="mobile menu icon" onClick={showSidebar} />
           </div>
           <div className="logo">
             <img src={logo} alt="company-logo" />
           </div>
-          <div className="location-icon">
+          <div className="location-icon" onClick={showAddressCard}>
             <img src={locationImg} alt="location icon" />
           </div>
           <div className="menu-items">

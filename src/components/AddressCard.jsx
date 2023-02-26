@@ -2,33 +2,30 @@ import React from "react";
 import locationIcon from "../assets/icons/location-colored.png";
 import { motion, AnimatePresence } from "framer-motion";
 
-const mobile_address = {
+const addressVariant = {
   hidden: {
-    x: 20,
-    y: -100,
+    x: "100vw",
     opacity: 0,
     transition: {
       duration: 0.5,
-      type: "inertia",
-      velocity: 50,
-    },
-    visible: {
-      x: 0,
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.5, type: "inertia", velocity: 50 },
     },
   },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.5, type:"spring", stiffness:120 },
+  },
 };
-const AddressCard = ({ showAddressCard }) => {
+const AddressCard = ({ showAddress }) => {
   return (
-    <AnimatePresence>
-      <div className="mobile-address">
-        {showAddressCard && (
+    <div className="mobile-address">
+      <AnimatePresence>
+        {showAddress && (
           <motion.div
-            variants={mobile_address}
+            variants={addressVariant}
             initial="hidden"
             animate="visible"
+            exit="hidden"
             className="container"
           >
             <div className="row">
@@ -49,8 +46,8 @@ const AddressCard = ({ showAddressCard }) => {
             </div>
           </motion.div>
         )}
-      </div>
-    </AnimatePresence>
+      </AnimatePresence>
+    </div>
   );
 };
 

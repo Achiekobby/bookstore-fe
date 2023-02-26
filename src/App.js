@@ -9,13 +9,14 @@ import AddressCard from "./components/AddressCard";
 
 function App() {
   const [sidebar, setSidebar] = useState(false)
+  const [showAddress, setShowAddress] = useState(false)
 
 
   return (
     <div className="App">
-      <Navbar showSidebar={()=>setSidebar(!sidebar)} />
+      <Navbar showSidebar={()=>setSidebar(!sidebar)}  showAddressCard={()=>setShowAddress(!showAddress)}/>
       <Mobilenav showSidebar={sidebar} mobileMenuClose={()=>setSidebar(false)}/>
-      <AddressCard showAddress = {sidebar}/>
+      <AddressCard showAddress = {showAddress} />
       <Routes>
         <Route path="/" element={<Home/>} />
       </Routes>
