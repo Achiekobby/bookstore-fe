@@ -1,8 +1,11 @@
 import React from 'react'
+import Searchnav from '../components/Searchnav'
 
 const Home = () => {
   return (
-    <div></div>
+    <div>
+      <Searchnav/>
+    </div>
   )
 }
 
