@@ -1,10 +1,13 @@
 import {v4 as uuidv4} from "uuid"
-
+import {SiMicrosoftacademic, SiProcessingfoundation} from "react-icons/si"
+import {IoBusinessSharp} from "react-icons/io5"
+import {MdHistoryEdu, MdOutlineSelfImprovement} from "react-icons/md"
+import {GiCardPick} from "react-icons/gi"
 export const navLinks = [
   {
     id:uuidv4(),
     title:"Home",
-    link:"/"
+    link:"/",
   },
   {
     id:uuidv4(),
@@ -31,27 +34,33 @@ export const navLinks = [
 export const categories = [
   {
     id: uuidv4(),
-    name:"Magazine"
+    name:"Magazine",
+    icon:<GiCardPick/>
   },
   {
     id: uuidv4(),
-    name:"Business"
+    name:"Business",
+    icon:<IoBusinessSharp/>
   },
   {
     id: uuidv4(),
-    name:"Poems"
+    name:"Poems",
+    icon:<SiProcessingfoundation/>
   },
   {
     id: uuidv4(),
-    name:"Personal Improvement"
+    name:"self Improvement",
+    icon:<MdOutlineSelfImprovement/>
   },
   {
     id: uuidv4(),
-    name:"Academia"
+    name:"Academia",
+    icon:<SiMicrosoftacademic/>
   },
   {
     id: uuidv4(),
-    name:"History"
+    name:"History",
+    icon:<MdHistoryEdu/>
   }
 
 ]

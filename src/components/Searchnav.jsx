@@ -5,7 +5,31 @@ import searchIcon from "../assets/icons/search.png";
 import addressLocation from "../assets/icons/location.png";
 import { IoTriangleSharp } from "react-icons/io5";
 import { categories } from "../data/NavbarLinks";
+import { AnimatePresence, motion } from "framer-motion";
 
+const listVariant = {
+  hover: {
+    scale: 1.1,
+    x: 5,
+    boxShadow: "0px 2px 6px -3px rgba(0,0,0,0.75)",
+    border:"1px solid #c1121f",
+    color: "#c1121f",
+
+    transition: {
+      duration: 0.5,
+      type: "ease",
+    },
+  },
+};
+const iconVariant = {
+  hover:{
+    color: "#c1121f",
+    transition: {
+      duration: 0.5,
+      type: "ease",
+    },
+  }
+}
 const Searchnav = () => {
   return (
     <div className="search-nav bg-primary">
@@ -26,11 +50,16 @@ const Searchnav = () => {
                 </div>
                 <ul className="menu_items">
                   {categories.map((category) => {
-                    const { id, name } = category;
+                    const { id, name, icon } = category;
                     return (
-                      <li key={id} className="list_item">
+                      <motion.li
+                        variants={listVariant}
+                        whileHover="hover"
+                        key={id}
+                        className="list_item font-md text-f-color mt-2 p-1"
+                      ><motion.span variants={iconVariant} className="mr-1 font-md">{icon}</motion.span>
                         {name}
-                      </li>
+                      </motion.li>
                     );
                   })}
                 </ul>
