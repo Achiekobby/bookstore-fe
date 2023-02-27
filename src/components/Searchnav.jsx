@@ -3,6 +3,8 @@ import menuIcon from "../assets/icons/menu.png";
 import { AiOutlineDown } from "react-icons/ai";
 import searchIcon from "../assets/icons/search.png";
 import addressLocation from "../assets/icons/location.png";
+import { IoTriangleSharp } from "react-icons/io5";
+import { categories } from "../data/NavbarLinks";
 
 const Searchnav = () => {
   return (
@@ -16,6 +18,23 @@ const Searchnav = () => {
             <h3 className="category-name text-white mr-2">Magazine</h3>
             <div className="drop-down text-white">
               <AiOutlineDown className="" />
+            </div>
+            <div className="categories p-2 br-sm">
+              <div className="search_items">
+                <div className="arrow_up">
+                  <IoTriangleSharp className="text-white" />
+                </div>
+                <ul className="menu_items">
+                  {categories.map((category) => {
+                    const { id, name } = category;
+                    return (
+                      <li key={id} className="list_item">
+                        {name}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </div>
           </div>
           <div className="search-input">
@@ -34,7 +53,11 @@ const Searchnav = () => {
             <div className="icon">
               <img src={addressLocation} alt="location-icon" />
             </div>
-            <input className="pt-1 pb-1 pr-1 pl-1 br-sm" type="text" placeholder="Accra, Ghana" />
+            <input
+              className="pt-1 pb-1 pr-1 pl-1 br-sm"
+              type="text"
+              placeholder="Accra, Ghana"
+            />
           </div>
         </div>
       </div>
