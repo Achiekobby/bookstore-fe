@@ -49,7 +49,7 @@ export const categories = [
   },
   {
     id: uuidv4(),
-    name:"self Improvement",
+    name:"self Help",
     icon:<MdOutlineSelfImprovement/>
   },
   {

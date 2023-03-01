@@ -24,6 +24,7 @@ $searchNavWidth: 100%;
         position: relative;
         @include flexPosition;
         width: calc($searchNavWidth - 83%);
+        cursor: pointer;
 
         .menu-img {
           @include flexPosition;
