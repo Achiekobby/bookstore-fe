@@ -44,6 +44,7 @@ $icon-color: #ffd45e, #ffa3a3, #75fb5a, #a577fa, #7dc0fa, #ffd7a3, #ff96da;
           position: absolute;
           left: 0;
           width: 250px;
+          z-index: 999;
           bottom: -480px;
           background: white;
           box-shadow: 0px 2px 6px -3px rgba(0, 0, 0, 0.75);
