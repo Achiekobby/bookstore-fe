@@ -99,11 +99,11 @@ const Searchnav = () => {
                             variants={listVariant}
                             whileHover="hover"
                             key={category.id}
-                            className="list_item font-md text-f-color mt-2 p-1"
+                            className="list_item font-md text-f-color p-1"
                           >
                             <motion.span
                               variants={iconVariant}
-                              className="mr-1 font-md"
+                              className="icon mr-1 font-md"
                             >
                               {category.icon}
                             </motion.span>

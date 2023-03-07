@@ -34,7 +34,7 @@ export const navLinks = [
 export const categories = [
   {
     id: uuidv4(),
-    name:"Magazine",
+    name:"Children",
     icon:<GiCardPick/>
   },
   {
@@ -44,22 +44,27 @@ export const categories = [
   },
   {
     id: uuidv4(),
-    name:"Poems",
+    name:"Educational",
     icon:<SiProcessingfoundation/>
   },
   {
     id: uuidv4(),
-    name:"self Help",
+    name:"Non-Fiction",
     icon:<MdOutlineSelfImprovement/>
   },
   {
     id: uuidv4(),
-    name:"Academia",
+    name:"Biography",
     icon:<SiMicrosoftacademic/>
   },
   {
     id: uuidv4(),
-    name:"History",
+    name:"Fantasy",
+    icon:<MdHistoryEdu/>
+  },
+  {
+    id: uuidv4(),
+    name:"Romance",
     icon:<MdHistoryEdu/>
   }
 
